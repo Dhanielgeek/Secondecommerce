@@ -1,0 +1,219 @@
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+    background: #7ae582;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  .logo{
+    width: 10%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Nav{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .toggle{
+    width: 10%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #679436;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .Menu{
+    width: 10%;
+    height: 90%;
+    display: none;
+  }
+  .active{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: all 350ms ease-in;
+    transform: scale(1);
+    text-decoration: none;
+  }
+  .active:hover{
+    transform: scale(1.1);
+    color: #679436;
+  }
+  .inactive{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(234, 231, 231);
+    cursor: pointer;
+    transition: all 350ms ease-in;
+    transform: scale(1);
+    text-decoration: none;
+  }
+  .inactive:hover{
+    transform: scale(1.1);
+    color: #679436;
+  }
+  .category{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 3%;
+  }
+  .CardCat{
+    width: 90%;
+    height: 80%;
+    background: #679436;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .eachcat{
+    width: 35%;
+    height: 40%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  @media screen and (max-width:600px) {
+    .Nav{
+        display: none;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        width: 50%;
+        height: 100%;
+    }
+    .logo img{
+        width: 60%;
+        height: 80%;
+    }
+    .Menu{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    }
+  }
+  @media screen and (max-width:400px) {
+    .Nav{
+        display: none;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        width: 50%;
+        height: 100%;
+    }
+    .logo img{
+        width: 60%;
+        height: 70%;
+    }
+    .Menu{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    }
+  }
+  @media screen and (max-width:320px) {
+    .Nav{
+        display: none;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        width: 50%;
+        height: 100%;
+    }
+    .logo img{
+        width: 90%;
+        height: 90%;
+    }
+    .Menu{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    }
+  }
